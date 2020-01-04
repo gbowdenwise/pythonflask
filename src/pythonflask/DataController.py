@@ -7,5 +7,8 @@ CORS(data_api) # enable CORS
 
 @data_api.route('/hello', methods=['GET'])
 def hello():
-    return "Hello from DataController!"
+    r = {
+        "message": "Hello from DataController!"
+    }
+    return jsonify(r)
 
